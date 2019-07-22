@@ -20,6 +20,9 @@ abstract class Controller {
         $this->model = $this->loadModel($route['controller']);
     }
 
+    /**
+     * models autoload
+     */
     public function loadModel($name) {
         $path = 'app\models\\' . ucfirst($name);
 
@@ -28,6 +31,9 @@ abstract class Controller {
         }
     }
 
+    /**
+     * Check roles from config
+     */
     public function checkRoles() {
         $this->roles = require 'app/config/roles.php';
         
@@ -44,6 +50,9 @@ abstract class Controller {
         return false;
     }
 
+    /**
+     * return existing roles
+     */
     public function isRole($key) {
         return in_array($this->route['action'], $this->roles[$key]);
     }

@@ -18,6 +18,10 @@ class Router {
         $route = '#^'.$route.'$#';
         $this->routes[$route] = $params;
     }
+
+    /**
+     * Cheking request and match with existing routes, if don't match - throw false
+     */
     public function match() {
         $url = trim($_SERVER['REQUEST_URI'], '/');
         foreach ($this->routes as $route => $params) {
@@ -36,6 +40,10 @@ class Router {
         }
         return false;
     }
+
+    /**
+     * Run controllers autoload
+     */
     public function run(){
         if ($this->match()) {
             $path = 'app\controllers\\'.ucfirst($this->params['controller']).'Controller';

@@ -6,7 +6,7 @@ use app\core\Model;
 
 class Main extends Model {
     public $error;
-
+    
     public function countPosts() {
         return $this->database->column('SELECT COUNT(id) FROM posts');
     }

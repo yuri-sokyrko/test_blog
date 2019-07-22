@@ -9,6 +9,11 @@ class AccountController extends Controller{
         parent::__construct($route);
     }
 
+    /**
+     * User login
+     * Validates user login form
+     * Checks if user exists
+     */
     public function loginAction() {
         if(isset($_SESSION['auth'])) {
             $this->view->redirect('main/index/1');
@@ -27,6 +32,12 @@ class AccountController extends Controller{
         $this->view->render('User login');
     }
 
+    /**
+     * Register user
+     * validate user register form
+     * Cheks if login and email exist
+     * Register user in DB
+     */
     public function registerAction() {
         if(!empty($_POST)) {
             if(!$this->model->registerValidate($_POST)) {
@@ -45,6 +56,9 @@ class AccountController extends Controller{
         $this->view->render('User register');
     }
 
+    /**
+     * Logout, ends session
+     */
     public function logoutAction() {
         unset($_SESSION['auth']);
         $this->view->redirect('account/login');

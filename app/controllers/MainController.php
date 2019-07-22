@@ -7,6 +7,10 @@ use app\lib\Pagination;
 use app\models\Admin;
 
 class MainController extends Controller{
+
+    /**
+     * Rendering of the index page
+     */
     public function indexAction() {
         $adminModel = new Admin;
         $postsAmount = 10;
@@ -19,6 +23,9 @@ class MainController extends Controller{
         $this->view->render('All blog articles', $vars);
     }
 
+    /**
+     * Rendering of the post
+     */
     public function postAction() {
         $adminModel = new Admin;
         if(!$adminModel->isPost($this->route['id'])) {
@@ -32,11 +39,17 @@ class MainController extends Controller{
         $this->view->render('Post', $vars);
     }
 
+    /**
+     * Put like into DB
+     */
     public function likeAction() {
         $this->model->likePost($this->route['id']);
         $this->view->redirect('post/' . $this->route['id']);
     }
 
+    /**
+     * Show specified category page
+     */
     public function categoryAction() {
         $currentCatId =   $this->model->getCatId($this->route['id']);
         $currentCatName = $this->model->getCatName($this->route['id']);
