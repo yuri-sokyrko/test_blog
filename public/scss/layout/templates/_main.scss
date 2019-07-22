@@ -1,0 +1,135 @@
+
+//main styles
+
+body {
+	&.blocked {
+		overflow: hidden;
+		height: 100%;
+	}
+}
+
+.main-wrapper {
+	padding: 0 0 0 0;
+	min-width: $min-width;
+    width: 100%;
+	position: relative;
+	overflow: hidden;
+	min-height:100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column;
+    -webkit-flex-direction:column;
+    -ms-flex-direction: column;
+	justify-content:flex-start;	
+    -webkit-justify-content:flex-start;	
+    -ms-flex-pack: start;
+}
+
+/* text position */
+.text-left {
+	text-align: left!important
+}
+
+.text-center {
+	text-align: center!important
+}
+
+.text-right {
+	text-align: right!important
+}
+
+.nowrap {
+	 white-space: nowrap!important;
+}
+
+/* loader */
+.loaded .main-wrapper {
+	visibility:hidden;
+}
+
+.icon-load {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top: 0;
+	left: 0;
+	display:none;
+	z-index: 999999999;
+	background-color: $base-bg;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		background:url(../img/loader.gif) no-repeat center / contain;
+		width: 60px;
+		height: 60px;
+		left: 50%;
+		top: 50%;
+		margin-top: -30px;
+		margin-left: -30px;
+		animation: preload 1.5s linear 0s infinite;
+	}
+}
+
+.loaded .icon-load {
+	display:block;
+}
+
+@keyframes preload {
+	0%, 100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+
+	30%, 70% {
+		opacity: 0.7;
+		transform: scale(1.1);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}
+
+/*
+================================================================================
+|                                     MAIN                                     |
+================================================================================
+*/
+.main {	
+	min-width: $min-width;
+    width: 100%;
+	order: 2;
+	flex-grow: 1;
+	text-align:left;
+	background: $base-bg;
+	padding: 70px 0;
+}
+
+.main-title {
+	display: block;
+	margin: 0 0 40px;
+	position: relative;
+	padding-left: 15px;
+	font-family: $title-font-family;
+	font-size: $font-size-h1;
+	line-height: normal;
+	font-weight: 700;
+	color: $title-color;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 6px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $main-color;
+	}
+}

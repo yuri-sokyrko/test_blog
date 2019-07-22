@@ -1,0 +1,41 @@
+
+/*
+================================================================================
+|                                  BUTTONS                                     |
+================================================================================
+*/
+.main-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    max-width: 220px;
+    border: none;
+    background-color: $custom-color;
+    font-size: $base-font-size;
+    line-height: 1;
+    text-align: center;
+    color: $text-color-white;
+    transition: $default-transition;
+
+    &:hover {
+        background-color: $custom-hover;
+    }
+
+    &--right {
+        margin: 0 0 0 auto;
+    }
+
+    &--center {
+        margin: 0 auto;
+    }
+
+    &--black {
+        background-color: $black-color;
+
+        &:hover {
+            background-color: rgba($black-color, 0.8);
+        }
+    }
+}

@@ -1,0 +1,167 @@
+
+/*
+================================================================================
+|                                      BLOG                                    |
+================================================================================
+*/
+
+.blog-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &__link {
+        display: block;
+        width: 100%;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            width: 100%;
+            height: auto;
+            transition: $default-transition;
+        }
+    }
+
+    &__title {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: $title-color;
+        max-height: 44px;
+        overflow: hidden;
+        transition: $default-transition;
+    }
+
+    &__exerpt {
+        display: block;
+        width: 100%;
+        font-size: $base-font-size;
+        line-height: normal;
+        font-weight: normal;
+        color: $text-color-gray;
+        margin-top: 10px;
+    }
+
+    &__likes {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: $text-color;
+
+        .likes-counter {
+            font-weight: 700;
+            color: $main-color;
+            font-size: $base-font-size;
+        }
+    }
+
+    &__functionals {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+        
+        a {
+            font-size: $base-font-size;
+            line-height: normal;
+            font-weight: 400;
+            color: $link-color;
+
+            &:hover {
+                text-decoration: underline;
+                color: $link-hover;
+            }
+        }
+    }
+
+    &:hover {
+        .blog-item__image {
+            img {
+                transform: translate3d(-50%, -50%, 0) scale(1.1);
+            }
+        }
+
+        .blog-item__title {
+            color: $main-color;
+        }
+    }
+}
+
+/*
+================================================================================
+|                                     MOBILE                                   |
+================================================================================
+*/
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1279px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 575px) {
+    .blog-item {
+        max-width: 290px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1280px) {
+
+}

@@ -1,0 +1,304 @@
+
+/*
+================================================================================
+|                                     ADMIN                                    |
+================================================================================
+*/
+.admin {
+    &__title {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        font-family: $title-font-family;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        font-weight: 700;
+        color: $title-color;
+    }
+}
+
+.admin-sidebar {
+    display: block;
+    width: 100%;
+    background-color: $border-color;
+
+    &__title {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: $black-color;
+        font-family: $title-font-family;
+        font-size: $font-size-h6;
+        color: $text-color-white;
+        font-weight: 700;
+
+        &:hover {
+            background-color: rgba($black-color, 0.4);
+        }
+    }
+
+    &__nav {
+        li {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid $base-bg;
+            padding: 10px;
+            color: $title-color;
+
+            &:hover {
+                background-color: rgba($black-color, 0.4);
+                color: $text-color-white;
+            }
+        }
+    }
+}
+
+.admin-posts {
+    display: block;
+    width: 100%;
+
+    &__container {
+        display: block;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        position: relative;
+        border-bottom: $border;
+        padding: 15px 0;
+
+        .img-wrapper {
+            flex: 0 0 180px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                transition: $default-transition;
+            }
+
+            &:hover {
+                img {
+                    transform: translate3d(0,0,0) scale(1.1);
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .short-content {
+            flex-grow: 1;
+            padding: 0 15px;
+
+            .title {
+                display: block;
+                font-family: $title-font-family;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                font-weight: 700;
+                color: $title-color;
+                margin-bottom: 6px;
+            }
+
+            .description {
+                display: block;
+                margin-bottom: 6px;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                line-height: $base-line-height;
+                font-weight: 400;
+                color: $text-color-gray;
+                font-style: italic;
+            }
+
+            &:hover {
+                .title {
+                    text-decoration: underline;
+                    color: $main-color;
+                }
+            }
+
+            .category {
+                display: block;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                line-height: $base-line-height;
+                font-weight: 400;
+                color: $main-color;
+                font-style: italic;
+                margin-bottom: 6px;
+            }
+
+            .date {
+                display: block;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                line-height: $base-line-height;
+                font-weight: 400;
+                color: $text-color;
+                font-style: italic;
+            }
+        }
+
+        .functionals {
+            flex: 0 0 180px;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 10px 15px;
+                background-color: $black-color;
+                border-bottom: 1px solid $base-bg;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                line-height: 1;
+                color: $text-color-white;
+                text-decoration: none;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    background-color: $main-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.post-categories {
+    &__table {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        margin-bottom: 50px;
+
+        tbody {
+            display: table;
+            width: 100%;
+        }
+
+        td, th {
+            padding: 10px;
+            border: $border;
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            line-height: normal;
+            color: $text-color;
+        }
+
+        a {
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            color: $link-color;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+                color: $link-hover;
+            }
+        }
+    }
+
+    form {
+        max-width: 480px;
+    }
+}
+
+/*
+================================================================================
+|                                     MOBILE                                   |
+================================================================================
+*/
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1279px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+    .admin-sidebar {
+        margin-bottom: 40px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .admin-posts {
+        &__item {
+            flex-wrap: wrap;
+
+            .img-wrapper {
+                flex: 0 0 100px;
+            }
+
+            .short-content {
+                max-width: calc(100% - 100px);
+            }
+
+            .functionals {
+                flex: 1 0 100%;
+                display: flex;
+                margin-top: 10px;
+
+                a {
+                    border-right: 1px solid $base-bg;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 575px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1280px) {
+
+}

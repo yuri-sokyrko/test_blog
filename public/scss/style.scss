@@ -1,0 +1,35 @@
+@import "base/reset";
+@import "base/fonts";
+
+/*
+================================================================================
+|                            LIBRARIES css BEGIN                               |
+================================================================================
+*/
+
+//@import "../libs/**.scss";
+
+
+/*
+================================================================================
+|                                COMPONENTS                                    |
+================================================================================
+*/
+@import "layout/components/buttons";
+@import "layout/components/forms";
+@import "layout/components/modals";
+@import "layout/components/text-box";
+@import "layout/components/pagination";
+@import "layout/components/info-box";
+
+/*
+================================================================================
+|                                 TEMPLATES                                    |
+================================================================================
+*/
+@import "layout/templates/header";
+@import "layout/templates/footer";
+@import "layout/templates/main";
+@import "layout/templates/blog";
+@import "layout/templates/page-error";
+@import "layout/templates/admin";

@@ -1,0 +1,36 @@
+
+/*
+================================================================================
+|                                   INFO BOX                                   |
+================================================================================
+*/
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba($main-color, 0.3);
+    border: 1px solid $main-color;
+    margin-bottom: 30px;
+
+    &::before {
+        content: 'i';
+        width: 44px;
+        height: 44px;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: rgba($main-color, 0.5);
+        font-size: 2.4rem;
+        font-weight: 700;
+        font-style: italic;
+        color: $text-color-white;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+}

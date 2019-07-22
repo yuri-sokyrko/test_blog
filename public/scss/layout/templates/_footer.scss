@@ -1,0 +1,48 @@
+
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+.footer {
+	width:100%;
+	min-width: $min-width;
+	order: 3;
+	text-align:left;
+	background: $custom-color;
+	padding: 30px 0;
+
+	&--admin {
+		background-color: $black-color;
+	}
+}
+
+.footer-container {
+	@extend .header-container;
+}
+
+.footer-logo {
+	a {
+		font-family: $base-font-family;
+		font-size: $font-size-h3;
+		line-height: normal;
+		text-transform: uppercase;
+		font-weight: 900;
+		color: $text-color-white;
+	}
+}
+
+.footer-copy {
+	font-size: $base-font-size;
+	line-height: normal;
+	color: $text-color-white;
+
+	a {
+		font-weight: normal;
+		color: $text-color-white;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
