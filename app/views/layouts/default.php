@@ -34,7 +34,7 @@
                         <li><a href="/">Home</a></li>
                         <?php if(!empty($categories)) : ?>
                             <li>
-                                <a href="#">Categories</a>
+                                <a href="javascript:void(0);">Categories</a>
                                 <ul class="sub-menu">                            
                                     <?php
                                         foreach($categories as $cat) {
