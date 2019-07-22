@@ -5,9 +5,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?php echo $title; ?></title>
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name='description' content="" />
+	<meta name="keywords" content="" />
+	<link rel="icon" type="image/x-icon" href="/public/img/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="/public/css/style.css" />
 </head>
 <body class="loaded">
